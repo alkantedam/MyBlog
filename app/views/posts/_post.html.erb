@@ -1,0 +1,26 @@
+<article class="post">
+  <div class="container" id="post">
+    <section class="post-head">
+
+
+    </section>
+
+    <section class="begin">
+      <%= image_tag post.image.url(:large), :class => "img-thumbnail" if post.image? %>
+      <h3 class="title"><%= post.title %></h3>
+
+    </section>
+
+    <section class = "post-body">
+      <%= post.body.html_safe %>
+    </section>
+
+    <small>
+      <time> <%= post.created_at.to_date.strftime("%d %B, %Y")%> </time>
+
+    </small>
+    <br>
+    <hr>
+  </div>
+
+</article>

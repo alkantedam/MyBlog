@@ -1,0 +1,5 @@
+ru:
+  posts:
+    form:
+      submit:
+        '%{action} статью'

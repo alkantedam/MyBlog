@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>О чем?</title>
+    <link rel="shortcut icon" href="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=60767999" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <%= link_to "blog", root_path, :class => "link" %>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container main">
+    <div class="row">
+      <div class="col col-md-12">
+          <% flash.each do |name, message|%>
+            <div class="alert alert-<%= name %>">
+              <%= message %>
+
+            </div>
+          <% end %>
+
+      </div>
+    </div>
+      </div>
+    <%= yield %>
+
+
+  </body>
+</html>
